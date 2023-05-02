@@ -27,7 +27,7 @@ export default {
 
         <h3>Found {{store.cardArray.length}} cards</h3>
 
-        <div class="row row-cols-5 test2">
+        <div class="row row-cols-5">
             <Card
               v-for
               ="card in store.cardArray"
@@ -58,7 +58,6 @@ export default {
 
   body{
     background-color: $bg-primary;
-    height: 700px; // da rimuovere
 
     select{
     border-radius: 5px;
