@@ -10,7 +10,15 @@ export default {
 
 </script>
 <template>
-  <h1>Main</h1>
+  <body>
+    
+
+
+
+
+
+
+  </body>
 
 
   
@@ -18,7 +26,12 @@ export default {
 
 
 <style lang="scss" scoped>
-
   @use '../scss/main.scss' as *;
+
+  body{
+    background-color: $bg-primary;
+    height: 700px; // da rimuovere
+  }
+
 
 </style>
