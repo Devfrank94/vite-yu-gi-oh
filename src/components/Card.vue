@@ -2,18 +2,18 @@
 export default {
   name: 'Card',
   props:{
-    img:String,
+    img:Array,
     name:String,
-    archetype:String,
+    type:String,
   }
 }
 </script>
 
 <template>
   <div class="fm-card col mb-3">
-    <img :src="img" :alt="name">
+    <img :src="img[0].image_url" :alt="name">
     <h5>{{ name }}</h5>
-    <span>{{ archetype }}</span>
+    <span>{{ type }}</span>
   </div>
 </template>
 

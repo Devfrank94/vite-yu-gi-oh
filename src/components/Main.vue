@@ -27,11 +27,15 @@ export default {
 
         <h3>Found {{store.cardArray.length}} cards</h3>
 
-        <div class="row row-cols-5 m-0 test2">
-          <div class="col test">
-            <Card v-for ="card in store.cardArray" :key="card.id" :img="card.image_url" :name="card.name" :archetype="card.archetype" />
+        <div class="row row-cols-5 test2">
+            <Card
+              v-for
+              ="card in store.cardArray"
+              :key="card.id"
+              :img="card.card_images"
+              :name="card.name"
+              :type="card.type" />
             
-          </div>
         </div>
 
       </div>
