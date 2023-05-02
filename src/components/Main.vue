@@ -25,11 +25,11 @@ export default {
 
       <div class="container-fluid p-4">
 
-        <h3>Found 39 cards</h3>
+        <h3>Found {{store.cardArray.length}} cards</h3>
 
-        <div class="row row-cols-5 m-0">
-          <div class="col">
-            <Card/>
+        <div class="row row-cols-5 m-0 test2">
+          <div class="col test">
+            <Card v-for ="card in store.cardArray" :key="card.id" :img="card.image_url" :name="card.name" :archetype="card.archetype" />
             
           </div>
         </div>
