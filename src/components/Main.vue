@@ -1,9 +1,15 @@
 <script>
+import {store} from "../data/store.js";
+import Card from "./Card.vue";
+
 export default {
   name:'Main',
+  components:{
+    Card
+  },
   data(){
     return {
-    
+    store
     }
   },
 }
@@ -20,6 +26,13 @@ export default {
       <div class="container-fluid p-4">
 
         <h3>Found 39 cards</h3>
+
+        <div class="row row-cols-5 m-0">
+          <div class="col">
+            <Card/>
+            
+          </div>
+        </div>
 
       </div>
 
