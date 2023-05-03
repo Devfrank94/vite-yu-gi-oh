@@ -3,7 +3,7 @@
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
 // import Footer from "./components/Footer.vue"
-
+import Loader from "./components/partials/Loader.vue";
 import axios from 'axios';
 import {store} from './data/store';
 
@@ -18,6 +18,7 @@ export default {
     Header,
     Main,
     // Footer
+    Loader
   },
 
   methods:{
