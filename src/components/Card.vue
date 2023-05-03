@@ -12,7 +12,7 @@ export default {
 <template>
   <div class="fm-card col mb-3">
     <img :src="img[0].image_url" :alt="name">
-    <div class="info pt-3">
+    <div class="info pt-2">
       <h5 class="py-1">{{ name }}</h5>
       <span class="py-3">{{ type }}</span>
     </div>

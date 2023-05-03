@@ -22,7 +22,12 @@ export default {
 
   methods:{
     getApi(){
-      axios.get(store.apiUrl + "?num=105&offset=0") // aggiunto per evitare che axios richiami tutte le carte contemporaneamente
+      axios.get(store.apiUrl, {
+        params:{
+          num: store.cardNumber,
+          offset: store.cardOffset
+        }
+      })
       .then(result => {
         store.cardArray = result.data.data;
         console.log(store.cardArray)

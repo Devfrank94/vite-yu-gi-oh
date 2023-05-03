@@ -11,3 +11,11 @@ Documentazione: https://ygoprodeck.com/api-guide/
 ## Bonus:
 
 Creare un componente che mostri il numero totale di risultati ottenuti.
+
+## Vite Yu Gi Oh step 2
+
+Oggi terminate l’esercizio inserendo la ricerca per “Type”.
+La ricerca deve partire da una select posta in un componente figlio rispetto a dove viene fatta la chiamata API.
+
+## BONUS
+Aggiungere la paginazione next/prev dal footer

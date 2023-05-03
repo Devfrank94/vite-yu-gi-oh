@@ -34,7 +34,8 @@ export default {
               :key="card.id"
               :img="card.card_images"
               :name="card.name"
-              :type="card.type" />
+              :type="card.archetype || card.type" />
+              <!-- Nel caso in cui non c'è l'archetipo viene sostituito dal tipo -->
             
         </div>
 
