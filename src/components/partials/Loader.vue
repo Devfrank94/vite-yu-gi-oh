@@ -11,7 +11,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
- 
+ @use '../../scss/main.scss' as *;
 
  .loader {
   width: 72px;
@@ -27,13 +27,13 @@ export default {
   grid-area: 1/1;
   border: 11.5px solid;
   border-radius: 50%;
-  border-color: #474bff #474bff #0000 #0000;
+  border-color: $bg-primary $bg-primary #0000 #0000;
   mix-blend-mode: darken;
   animation: spinner-plncf9 1.2s infinite linear;
 }
 
 .loader::after {
-  border-color: #0000 #0000 #dbdcef #dbdcef;
+  border-color: $bg-secondary $bg-secondary #dbdcef #dbdcef;
   animation-direction: reverse;
 }
 

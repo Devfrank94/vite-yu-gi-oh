@@ -26,6 +26,7 @@ export const store = reactive({
     'Tuner Monster',
     'Union Effect Monster'
   ],
+  isLoad: true
 
-  
+
 })

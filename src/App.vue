@@ -23,6 +23,7 @@ export default {
 
   methods:{
     getApi(){
+      store.isLoad = true;
       axios.get(store.apiUrl, {
         params:{
           num: store.cardNumber,
@@ -45,10 +46,16 @@ export default {
 
   <Header />
 
+  <Loader v-if="store.isLoad"/>
+
+  <!-- Main e Footer contenuti in un div per permettere la condizione v-else in modo da apparire una volta che il loader scompare a sua volta per condizione soddisfatta -->
+  <div v-else>
+
   <Main />
 
   <!-- <Footer /> -->
 
+  </div>
   
 </template>
 
