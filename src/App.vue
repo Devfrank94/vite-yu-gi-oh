@@ -31,6 +31,7 @@ export default {
         }
       })
       .then(result => {
+        store.isLoad = false;
         store.cardArray = result.data.data;
         console.log(store.cardArray)
       })
