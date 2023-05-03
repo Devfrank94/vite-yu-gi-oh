@@ -1,11 +1,13 @@
 <script>
 import {store} from "../data/store.js";
 import Card from "./Card.vue";
+import Search from "./partials/Search.vue";
 
 export default {
   name:'Main',
   components:{
-    Card
+    Card,
+    Search
   },
   data(){
     return {
@@ -19,9 +21,8 @@ export default {
   <body>
     
     <div class="fmcontainer">
-      <select class="m-3" name="" id="">
-        <option value="Alien">Alien</option>
-      </select>
+      
+      <search/>
 
       <div class="container-fluid p-4">
 
@@ -60,11 +61,6 @@ export default {
   body{
     background-color: $bg-primary;
 
-    select{
-    border-radius: 5px;
-    padding: 5px;
-    min-width: 150px;
-    border: 0;
   }
 
   .fmcontainer{
@@ -83,7 +79,6 @@ export default {
     }
 
   }
-}
 
 
 </style>
