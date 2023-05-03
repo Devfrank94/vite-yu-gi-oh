@@ -1,13 +1,11 @@
 <script>
 
-// per importare dati dalla cartella data in cui ci sono database
-//import {mainMenu, footerMenu} from "../data/menus";
+
 export default {
   name: "Footer",
   data(){
     return{
-      // mainMenu,
-      // footerMenu
+    
     }
   }
 }
@@ -15,13 +13,20 @@ export default {
 
 <template>
   
-  <h1>Footer</h1>
+  <footer>
+
+  </footer>
 
 </template>
 
 
 <style lang="scss" scoped>
   @use '../scss/main.scss' as *;
+
+  footer{
+    background-color: $bg-primary;
+    height: 100px;
+  }
 
 
 </style>

@@ -28,7 +28,7 @@ export default {
 
   .info{
     background-color: $bg-primary;
-    height: 100px;
+    min-height: 130px;
 
     h5{
       color: white;
