@@ -8,6 +8,14 @@ export default {
     return{
       store
     }
+  },
+
+  methods:{
+    saveType(value){
+      store.optionType = value;
+      this.$emit('filterCards')
+      console.log(store.optionType)
+    }
   }
 }
 </script>
@@ -15,7 +23,8 @@ export default {
 <template>
 
   <select v-model="store.optionType" class="m-3" name="" id="">
-    <option v-for="(type) in store.typeMonsterArr" :key="type" value="type">{{ type }}</option>
+    <option @click="saveType(null)" selected>All Type Cards</option>
+    <option v-for="(type) in store.typeMonsterArr" :key="type" @click="saveType(type)" value="type">{{ type }}</option>
   </select>
 
 </template>

@@ -39,7 +39,7 @@ export default {
     },
 
     getCardTypes(){
-        axios.get(store.apiURL).then(result => {
+        axios.get(store.apiUrl).then(result => {
           const cards = result.data.data;
           cards.forEach(card => {
               if (!store.typeMonsterArr.includes(card.type)) {
@@ -67,7 +67,7 @@ export default {
   <!-- Main e Footer contenuti in un div per permettere la condizione v-else in modo da apparire una volta che il loader scompare a sua volta per condizione soddisfatta -->
   <div v-else>
 
-  <Main />
+  <Main @cardFilter="getApi" />
 
   <Footer />
 

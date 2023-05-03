@@ -14,6 +14,13 @@ export default {
     store
     }
   },
+
+  methods:{
+    cardFilter(){
+      this.$emit('cardFilter')
+    }
+  }
+
 }
 
 </script>
@@ -22,7 +29,7 @@ export default {
     
     <div class="fmcontainer">
       
-      <search/>
+      <search @filterCards="cardFilter"/>
 
       <div class="container-fluid p-4">
 
@@ -35,7 +42,7 @@ export default {
               :key="card.id"
               :img="card.card_images"
               :name="card.name"
-              :type="card.archetype || card.type" />
+              :type="card.type" />
               <!-- Nel caso in cui non c'è l'archetipo viene sostituito dal tipo -->
             
         </div>
