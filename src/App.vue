@@ -27,7 +27,8 @@ export default {
       axios.get(store.apiUrl, {
         params:{
           num: store.cardNumber,
-          offset: store.cardOffset
+          offset: store.cardOffset,
+          type: store.optionType
         }
       })
       .then(result => {
@@ -35,10 +36,24 @@ export default {
         store.cardArray = result.data.data;
         console.log(store.cardArray)
       })
-    }
+    },
+
+    getCardTypes(){
+        axios.get(store.apiURL).then(result => {
+          const cards = result.data.data;
+          cards.forEach(card => {
+              if (!store.typeMonsterArr.includes(card.type)) {
+                store.typeMonsterArr.push(card.type)
+              }
+          });
+          console.log(store.typeMonsterArr);
+        })
+      }
+
   },
   mounted(){
     this.getApi();
+    this.getCardTypes()
   }
 }
 

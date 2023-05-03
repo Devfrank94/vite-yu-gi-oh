@@ -14,8 +14,7 @@ export default {
 
 <template>
 
-  <select class="m-3" name="" id="">
-    <option value="" selected>Seleziona il filtro</option>
+  <select v-model="store.optionType" class="m-3" name="" id="">
     <option v-for="(type) in store.typeMonsterArr" :key="type" value="type">{{ type }}</option>
   </select>
 
